@@ -6,6 +6,8 @@
 
 > **Convert any webpage to clean markdown in seconds—even JavaScript-heavy SPAs. Drop it in your project, run one command, and you're done. No complex setup, no configuration files, just instant results.** 🚀
 
+> ⚠️ **IMPORTANT DISCLAIMER:** This tool is for **legal and ethical use only**. You are responsible for complying with copyright laws, website Terms of Service, and all applicable regulations. See [DISCLAIMER.md](DISCLAIMER.md) for full terms.
+
 A Python tool to download web pages and save them in markdown format with **automatic JavaScript rendering support**.
 
 **Version:** 2.0  
@@ -236,3 +238,19 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 - **Code of Conduct:** [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 - **Security Policy:** [SECURITY.md](SECURITY.md)
 - **Release Notes:** [RELEASE_NOTES.md](RELEASE_NOTES.md)
+
+## ⚠️ Disclaimer
+
+**Use this tool responsibly and legally.** By using this software, you agree to:
+
+- ✅ Use only for **legal and ethical purposes**
+- ✅ Respect **copyright laws** and intellectual property rights
+- ✅ Comply with **website Terms of Service** and robots.txt
+- ✅ Obtain **permission** when required
+- ❌ NOT use for copyright infringement or data theft
+- ❌ NOT violate Terms of Service or access restrictions
+- ❌ NOT use for malicious, harmful, or illegal activities
+
+**You are solely responsible for your use of this tool and any legal consequences.**
+
+See [DISCLAIMER.md](DISCLAIMER.md) for complete terms and legal notice.

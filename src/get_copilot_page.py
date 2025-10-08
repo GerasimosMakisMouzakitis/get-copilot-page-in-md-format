@@ -39,6 +39,31 @@ except ImportError as e:
         sys.exit(1)
 
 
+def show_disclaimer():
+    """Display legal disclaimer on first run."""
+    disclaimer = """
+╔══════════════════════════════════════════════════════════════════════╗
+║                    ⚠️  LEGAL DISCLAIMER ⚠️                           ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  This tool is for LEGAL and ETHICAL use only.                       ║
+║  You are responsible for:                                            ║
+║    ✓ Complying with copyright laws                                   ║
+║    ✓ Respecting website Terms of Service                            ║
+║    ✓ Obtaining permission when required                             ║
+║    ✓ Using the tool legally and ethically                           ║
+║                                                                      ║
+║  You may NOT:                                                        ║
+║    ✗ Violate copyrights or intellectual property rights             ║
+║    ✗ Bypass authentication or paywalls                              ║
+║    ✗ Use for malicious or illegal purposes                          ║
+║                                                                      ║
+║  Use at your own risk. You accept all liability for your actions.   ║
+║  See DISCLAIMER.md for full terms.                                   ║
+╚══════════════════════════════════════════════════════════════════════╝
+"""
+    print(disclaimer)
+
+
 def is_valid_url(url):
     """Validate if the provided string is a valid URL."""
     try:
@@ -233,6 +258,9 @@ Downloaded files are saved to the 'downloads/' folder by default.
                         help='Output directory for downloaded files (default: downloads/)')
     
     args = parser.parse_args()
+    
+    # Show disclaimer
+    show_disclaimer()
     
     # Validate URL
     if not is_valid_url(args.url):

@@ -1,6 +1,6 @@
-Why do we have two py files for get_copilot_page.py in root and in the src folder?
 ---
-
+Add detailed disclaimer cause maybe someone will use the app for bad actions
+---
 ADD APP FOR Installation TO REPOSITORIES
 pip
 setuptools 

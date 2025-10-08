@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1] - 2025-10-08
+
+### Added
+- **Comprehensive legal disclaimer** (DISCLAIMER.md) - 6000+ word legal protection document
+- **Disclaimer display on script execution** - Shows legal notice every time the tool runs
+- **Dedicated downloads folder** - All files now saved to `downloads/` directory by default
+- **Custom output directory option** - New `-d/--dir/--output-dir` flag for flexible file organization
+- **Automatic directory creation** - Creates output directories if they don't exist
+- **Updated documentation** - All docs now include limitations and legal warnings
+
+### Changed
+- Default save location changed from current directory to `downloads/` folder
+- README.md now includes prominent disclaimer warnings
+- Enhanced .gitignore to exclude downloads folder and allow DISCLAIMER.md
+
+### Security
+- Added comprehensive legal protection against misuse
+- Clear terms of acceptable and prohibited use
+- User liability and responsibility clearly defined
+- Compliance guidelines for copyright, ToS, and privacy laws
+
 ## [2.0] - 2025-10-08
 
 ### Added
