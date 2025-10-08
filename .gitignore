@@ -1,6 +1,22 @@
-# Test output files
+# Test output files (downloaded pages)
+# Users' downloaded markdown files should not be committed
+# But allow project documentation files
+
+# Ignore all .md files by default (downloaded web pages)
 *.md
+
+# But ALLOW these specific documentation files:
 !README.md
+!CHANGELOG.md
+!CONTRIBUTING.md
+!CODE_OF_CONDUCT.md
+!SECURITY.md
+!ATTRIBUTION.md
+!RELEASE_NOTES.md
+!RELEASE_SETUP_GUIDE.md
+!GITHUB_DOCS_CHECKLIST.md
+
+# Allow markdown in specific directories
 !docs/**/*.md
 !tests/**/*.md
 !backup/README.md
@@ -83,11 +99,7 @@ env/
 .DS_Store
 Thumbs.db
 
-# Generated markdown files from downloads (users should keep their own)
-# Exclude all .md files except documentation
-*.md
-!README.md
-!USAGE.md
+# (Already handled above - no duplicate needed)
 
 # Test files
 test_*.html

@@ -58,6 +58,25 @@ The generated markdown file includes:
 [Converted page content in markdown format]
 ```
 
+## Important: Pages That May Not Work
+
+This tool works with most public web pages, but some pages cannot be downloaded:
+
+### ✅ Works With:
+- **Public web pages** - Blogs, news articles, documentation
+- **Static pages** - Regular HTML websites
+- **JavaScript-heavy pages** - React, Vue, Angular applications (requires Playwright)
+- **Most content sites** - Wikipedia, Medium, GitHub Pages
+
+### ❌ Cannot Download:
+- **Login-required pages** - Any page that needs you to sign in first
+- **Paywalled content** - Articles or content behind a payment wall
+- **Anti-bot sites** - Websites that block automated tools
+- **Some secure applications** - Banking sites, private dashboards
+- **Interactive-only content** - Content that only loads after specific user actions
+
+**When a page cannot be downloaded, you will see a clear error message explaining the problem.**
+
 ## Troubleshooting
 
 ### Missing Dependencies
@@ -70,6 +89,15 @@ pip install -r requirements.txt
 Make sure the URL includes the protocol (http:// or https://):
 - ✅ Good: `https://example.com/page`
 - ❌ Bad: `example.com/page`
+
+### Page Cannot Be Downloaded
+If you see an error like "Could not extract content", the page may:
+- Require login credentials
+- Be protected against automated access
+- Need specific browser cookies or sessions
+- Have anti-scraping measures enabled
+
+**Try with a different public URL to confirm the tool is working correctly.**
 
 ### Network Issues
 If you can't access the URL, check:

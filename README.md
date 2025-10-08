@@ -113,6 +113,25 @@ python src/get_copilot_page.py https://copilot.microsoft.com/shares/pages/xyz -o
 - html2text
 - playwright (optional but recommended for JavaScript-rendered pages)
 
+## Important: What This Tool Can and Cannot Download
+
+### ✅ Works With:
+- Public web pages (blogs, documentation, articles)
+- Static HTML pages
+- JavaScript-rendered pages (React, Vue, Angular apps)
+- Most news sites and content pages
+- GitHub Pages, Medium articles, Wikipedia
+- Public documentation sites
+
+### ❌ Cannot Download:
+- **Login-protected pages** - Pages that require you to sign in
+- **Paywalled content** - Content behind subscription walls
+- **Anti-bot protected sites** - Sites that actively block automated tools
+- **Complex web applications** - Banking sites, dashboards with heavy security
+- **Some dynamically loaded content** - Content that requires specific user interactions
+
+**If the tool cannot download a page, it will show you a clear error message explaining why.**
+
 ## Output Format
 
 The generated markdown file includes:
