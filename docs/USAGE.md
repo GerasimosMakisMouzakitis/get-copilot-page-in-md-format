@@ -17,20 +17,32 @@
 
 ### Example 1: Download with auto-generated filename
 ```bash
-python get_copilot_page.py https://github.copilot.example.com/page
+python get_copilot_page.py https://example.com/page
 ```
-This will create a file like `GitHub_Copilot_Page_Title.md`
+This will create a file like `downloads/Page_Title.md`
 
 ### Example 2: Download with custom filename
 ```bash
-python get_copilot_page.py https://github.copilot.example.com/page -o my_notes.md
+python get_copilot_page.py https://example.com/page -o my_notes.md
 ```
-This will create a file named `my_notes.md`
+This will create a file named `downloads/my_notes.md`
 
-### Example 3: Make script executable (Linux/Mac)
+### Example 3: Download to custom directory
+```bash
+python get_copilot_page.py https://example.com/page -d my_pages/
+```
+This will save to `my_pages/Page_Title.md`
+
+### Example 4: Custom filename AND directory
+```bash
+python get_copilot_page.py https://example.com/page -o notes.md -d docs/
+```
+This will create `docs/notes.md`
+
+### Example 5: Make script executable (Linux/Mac)
 ```bash
 chmod +x get_copilot_page.py
-./get_copilot_page.py https://github.copilot.example.com/page
+./get_copilot_page.py https://example.com/page
 ```
 
 ## What the Script Does

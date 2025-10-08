@@ -2,6 +2,9 @@
 # Users' downloaded markdown files should not be committed
 # But allow project documentation files
 
+# Ignore downloads folder (where web pages are saved)
+downloads/
+
 # Ignore all .md files by default (downloaded web pages)
 *.md
 

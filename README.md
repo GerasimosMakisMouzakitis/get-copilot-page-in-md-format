@@ -71,7 +71,7 @@ playwright install chromium
 
 ### Basic Usage
 
-Download a page (filename auto-generated from page title):
+Download a page (saved to `downloads/` folder by default):
 ```bash
 python src/get_copilot_page.py <URL>
 
@@ -79,30 +79,42 @@ python src/get_copilot_page.py <URL>
 python get_copilot_page.py <URL>
 ```
 
-### Custom Output Filename
+### Custom Output Options
 
-Specify a custom output filename:
 ```bash
+# Custom filename
 python src/get_copilot_page.py <URL> -o my_page.md
+
+# Custom output directory
+python src/get_copilot_page.py <URL> -d my_folder/
+
+# Both custom filename and directory
+python src/get_copilot_page.py <URL> -o tutorial.md -d docs/
 ```
 
 ### Examples
 
 ```bash
-# Download with auto-generated filename
+# Download with auto-generated filename (saved to downloads/)
 python src/get_copilot_page.py https://example.com/page
 
-# Download with custom filename
+# Download with custom filename (saved to downloads/tutorial.md)
 python src/get_copilot_page.py https://example.com/page -o tutorial.md
+
+# Download to custom directory (saved to my_pages/)
+python src/get_copilot_page.py https://example.com/page -d my_pages/
 
 # Works with JavaScript-rendered pages (SPAs)
 python src/get_copilot_page.py https://copilot.microsoft.com/shares/pages/xyz -o copilot_share.md
 ```
 
+**Note:** All downloaded files are automatically saved to the `downloads/` folder by default to keep your workspace organized.
+
 ### Command-Line Options
 
-- `url` (required): The URL of the Copilot public page to download
+- `url` (required): The URL of the web page to download
 - `-o, --output`: Optional custom output filename (default: auto-generated from page title)
+- `-d, --dir, --output-dir`: Output directory for downloaded files (default: `downloads/`)
 - `-h, --help`: Show help message
 
 ## Requirements

@@ -1,7 +1,12 @@
+Why do we have two py files for get_copilot_page.py in root and in the src folder?
+---
+
 ADD APP FOR Installation TO REPOSITORIES
 pip
 setuptools 
 PyPI
+
+---
 
 Only one manual step remains:
 

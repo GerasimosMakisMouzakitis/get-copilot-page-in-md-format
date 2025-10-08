@@ -178,12 +178,29 @@ def convert_to_markdown(html_content, url):
     return title, header + markdown_content
 
 
-def save_markdown(content, filename):
-    """Save markdown content to a file."""
+def save_markdown(content, filename, output_dir="downloads"):
+    """
+    Save markdown content to a file in the specified output directory.
+    
+    Args:
+        content: Markdown content to save
+        filename: Name of the output file
+        output_dir: Directory to save the file (default: "downloads")
+    
+    Returns:
+        bool: True if successful, False otherwise
+    """
     try:
-        output_path = Path(filename)
-        output_path.write_text(content, encoding='utf-8')
-        print(f"Successfully saved to: {output_path.absolute()}")
+        # Create output directory if it doesn't exist
+        output_path = Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+        
+        # Create full file path
+        file_path = output_path / filename
+        
+        # Save the file
+        file_path.write_text(content, encoding='utf-8')
+        print(f"Successfully saved to: {file_path.absolute()}")
         return True
     except Exception as e:
         print(f"Error saving file: {e}")
@@ -202,12 +219,18 @@ def main():
 Examples:
   python get_copilot_page.py https://example.com/page
   python get_copilot_page.py https://example.com/page -o custom_name.md
+  python get_copilot_page.py https://example.com/page -d my_downloads/
   python get_copilot_page.py https://copilot.microsoft.com/shares/pages/xyz
+  
+Downloaded files are saved to the 'downloads/' folder by default.
         """
     )
     
-    parser.add_argument('url', help='URL of the Copilot public page to download')
+    parser.add_argument('url', help='URL of the web page to download')
     parser.add_argument('-o', '--output', help='Output filename (default: auto-generated from page title)')
+    parser.add_argument('-d', '--dir', '--output-dir', dest='output_dir', 
+                        default='downloads',
+                        help='Output directory for downloaded files (default: downloads/)')
     
     args = parser.parse_args()
     
@@ -255,7 +278,7 @@ Examples:
         output_filename += '.md'
     
     # Save to file
-    if save_markdown(markdown_content, output_filename):
+    if save_markdown(markdown_content, output_filename, args.output_dir):
         print(f"Page title: {title}")
         print("Conversion completed successfully!")
     else:
