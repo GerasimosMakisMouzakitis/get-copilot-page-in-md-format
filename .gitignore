@@ -37,9 +37,11 @@ env/
 .DS_Store
 Thumbs.db
 
-# Generated markdown files (users should keep their own)
+# Generated markdown files from downloads (users should keep their own)
+# Exclude all .md files except documentation
 *.md
 !README.md
+!USAGE.md
 
 # Test files
 test_*.html
