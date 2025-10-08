@@ -1,3 +1,11 @@
+# Test output files
+*.md
+!README.md
+!docs/**/*.md
+!tests/**/*.md
+!backup/README.md
+!.github/**/*.md
+
 # Python
 __pycache__/
 *.py[cod]
@@ -8,6 +16,44 @@ build/
 develop-eggs/
 dist/
 downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Distribution
+dist/
+build/
 eggs/
 .eggs/
 lib/

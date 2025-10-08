@@ -5,6 +5,7 @@
 1. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
+   playwright install chromium
    ```
 
 2. **Run the script:**
@@ -35,12 +36,13 @@ chmod +x get_copilot_page.py
 ## What the Script Does
 
 1. **Fetches** the HTML content from the provided URL
-2. **Extracts** the page title and main content
-3. **Converts** HTML to clean markdown format
-4. **Removes** unnecessary elements (scripts, styles, navigation)
-5. **Preserves** links, images, formatting, lists, and structure
-6. **Adds** a header with the page title and source URL
-7. **Saves** to a `.md` file
+2. **Detects** if the page is JavaScript-rendered (SPA) and automatically retries with browser automation
+3. **Extracts** the page title and main content
+4. **Converts** HTML to clean markdown format
+5. **Removes** unnecessary elements (scripts, styles, navigation)
+6. **Preserves** links, images, formatting, lists, and structure
+7. **Adds** a header with the page title and source URL
+8. **Saves** to a `.md` file
 
 ## Output Format
 
@@ -111,4 +113,6 @@ done < urls.txt
 - Scripts and styles are stripped from the output
 - Links and images are preserved in markdown format
 - The filename is sanitized to be filesystem-safe
+- JavaScript-rendered pages (SPAs) are automatically detected and handled with browser automation
+- For best results with dynamic pages, ensure Playwright and Chromium are installed
 - Maximum filename length is 200 characters
