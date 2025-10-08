@@ -193,4 +193,15 @@ See [LICENSE](LICENSE) for full terms. See [ATTRIBUTION.md](ATTRIBUTION.md) for 
 
 ## Contributing
 
-Contributions are welcome! Feel free to open issues or submit pull requests.
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before getting started.
+
+- 🐛 [Report a Bug](https://github.com/GerasimosMakisMouzakitis/get-copilot-page-in-md-format/issues/new?template=bug_report.md)
+- 💡 [Request a Feature](https://github.com/GerasimosMakisMouzakitis/get-copilot-page-in-md-format/issues/new?template=feature_request.md)
+- 📚 [Improve Documentation](https://github.com/GerasimosMakisMouzakitis/get-copilot-page-in-md-format/issues/new?template=documentation.md)
+- 🔒 [Report Security Issue](SECURITY.md)
+
+## Community
+
+- **Code of Conduct:** [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- **Security Policy:** [SECURITY.md](SECURITY.md)
+- **Release Notes:** [RELEASE_NOTES.md](RELEASE_NOTES.md)
